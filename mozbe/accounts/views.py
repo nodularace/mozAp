@@ -26,7 +26,7 @@ def ProviderBulkCUD(request):
     providers_list = []
     if request.method == 'GET':
          for qs in providers:
-            providers_list.append({'id': qs.id, 'language':qs.language, 'email':qs.email, 'phone':qs.phone, 'currency':qs.currency})
+            providers_list.append({'id': qs.id, 'name':qs.name ,'language':qs.language, 'email':qs.email, 'phone':qs.phone, 'currency':qs.currency})
          return Response(providers_list, status=status.HTTP_200_OK)
 
     if request.method == 'POST':
